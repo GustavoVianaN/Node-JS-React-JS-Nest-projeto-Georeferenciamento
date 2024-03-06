@@ -13,18 +13,11 @@ import { TypesController } from './controllers/types.controller';
 @Module({
   imports: [
     KeycloakConnectModule.register({
-      authServerUrl: "https://192.168.13.116:9998",
-      "ssl-required": "external",
-      resource: 'portal-api',
-      "verify-token-audience": true,
-      realm: 'ipms-dev',
-      clientId: 'portal-api',
-      secret: "DStrv7hapnwEI6NzOYGT0dfCiN58a6OK",
-      'confidential-port': 0
+///////// tirei por segurança
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: '192.168.13.116',
+      host: '192.168.13.xxx',
       port: 5432,
       username: 'postgres',
       password: 'sistemas',
